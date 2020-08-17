@@ -1,0 +1,42 @@
+{
+    "name": "GPLinksBot",
+    "description": "shorten your long links",
+    "keywords": [
+        "telegram",
+        "best",
+        "shortner",
+        "gplinks",
+        "shortzon",
+        "3",
+        "multi"
+    ],
+    "repository": "https://gitlab.com/spechide/GPLinksBot",
+    "success_url": "https://telegram.dog/SpEcHlDe",
+    "website": "https://gitlab.com/spechide/GPLinksBot",
+    "env": {
+        "IS_WEBHOOK": {
+            "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+            "value": "ANYTHING"
+        },
+        "API_TOKEN": {
+            "description": "Your bot token, as a string."
+        },
+        "URL": {
+            "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+            "value": "https://example.com/"
+        },
+        "PORT": {
+            "description": "Port to use for your webhooks",
+            "required": false
+        },
+        "SHORTEN_LINK_API_KEY": {
+            "description": "Your GPLinks token, as a string."
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

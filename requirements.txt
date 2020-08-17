@@ -1,0 +1,5 @@
+# for interacting with Telegram BOT API
+aiogram
+
+# for making HTTP requests
+aiohttp
