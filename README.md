@@ -15,12 +15,12 @@
 
 - clone the repository, locally.
 ```sh
-git clone https://GitLab.com/SpEcHiDe/GPLinksBot.git
+git clone https://GitLab.com/SpEcHiDe/ShortLinkBot.git -b aiogram
 ```
 
 - change the directory.
 ```sh
-cd GPLinksBot
+cd ShortLinkBot
 ```
 
 - create a virtual environment.

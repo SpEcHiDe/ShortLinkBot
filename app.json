@@ -10,9 +10,9 @@
         "3",
         "multi"
     ],
-    "repository": "https://gitlab.com/spechide/GPLinksBot",
+    "repository": "https://github.com/spechide/ShortLinkBot",
     "success_url": "https://telegram.dog/SpEcHlDe",
-    "website": "https://gitlab.com/spechide/GPLinksBot",
+    "website": "https://github.com/spechide/ShortLinkBot",
     "env": {
         "IS_WEBHOOK": {
             "description": "Setting this to ANYTHING will enable webhooks when in env mode",
