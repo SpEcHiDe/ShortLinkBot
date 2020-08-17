@@ -22,12 +22,7 @@
             "description": "Your bot token, as a string."
         },
         "URL": {
-            "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
-            "value": "https://example.com/"
-        },
-        "PORT": {
-            "description": "Port to use for your webhooks",
-            "required": false
+            "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/"
         },
         "SHORTEN_LINK_API_KEY": {
             "description": "Your GPLinks token, as a string."
