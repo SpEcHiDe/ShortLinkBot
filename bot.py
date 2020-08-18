@@ -57,6 +57,7 @@ WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 # webserver settings
 WEBAPP_HOST = "0.0.0.0"
 WEBAPP_PORT = int(os.environ.get("PORT", "3001"))
+ALLOW_MULTIPLE_LINKS = bool(os.environ.get("ALLOW_MULTIPLE_LINKS", False))
 # -*- CONSTANTS -*-
 
 
@@ -122,13 +123,16 @@ async def links_handler_f(message: types.Message):
     status_message = await message.reply(CHECKING_TEXT)
     output_url_s = await get_short_zon_links(message)
     if len(output_url_s) > 0:
-        await status_message.edit_text(
-            json.dumps(
-                output_url_s,
-                sort_keys=True,
-                indent=4
+        if ALLOW_MULTIPLE_LINKS:
+            await status_message.edit_text(
+                json.dumps(
+                    output_url_s,
+                    sort_keys=True,
+                    indent=4
+                )
             )
-        )
+        else:
+            await status_message.edit_text(output_url_s[0][next(iter(output_url_s[0]))])
     else:
         await status_message.edit_text(NO_LINKS_PROVIDED)
 
